@@ -1,0 +1,53 @@
+/* =======================
+   variables.scss
+======================= */
+
+/* Couleurs principales */
+$color-dark: #000612;
+$color-dark-soft: #2a2a2a;
+$color-bg: #fafafa;
+$color-primary: #1a1a1a;
+$color-primary-dark: #000;
+$color-muted: #555;
+
+/* Gris / bordures / texte */
+$grey: #e5e5e5;
+$grey-light: #f7f7f7;
+$border-color: #d0d0d0;
+$text-color: #222;
+$radius: 6px;
+
+/* Feu discret (acier chaud) */
+$fire-red: #b44f2e;
+$fire-orange: #c96a3a;
+$fire-amber: #d98a52;
+$fire-warm: #e7b07a;
+
+/* Accents métalliques */
+$accent-metal: #d98a52;
+$accent-metal-light: #e7b07a;
+
+/* Lasers */
+$laser-blue: #00aaff;
+$laser-blue-soft: #bbcfd8;
+
+/* Typo */
+$font-family-base: "Inter", sans-serif;
+$font-size-base: 1rem;
+$font-size-lg: 1.15rem;
+$font-size-sm: .9rem;
+$font-size-xs: .8rem;
+
+/* Espacements */
+$space-1: .25rem;
+$space-2: .5rem;
+$space-3: 1rem;
+$space-4: 1.5rem;
+$space-5: 2rem;
+
+/* Ombres */
+$shadow-soft: 0 2px 6px rgba(0,0,0,0.06);
+$shadow-medium: 0 4px 12px rgba(0,0,0,0.12);
+
+/* Transitions */
+$transition-base: .25s ease;

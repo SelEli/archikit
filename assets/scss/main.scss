@@ -1,0 +1,52 @@
+/* =======================
+   main.scss
+   Global + layout
+======================= */
+
+@use 'variables';
+@use 'components';
+
+/* GLOBAL */
+
+body {
+  font-family: variables.$font-family-base;
+  background: variables.$color-bg;
+  color: variables.$color-dark;
+  margin: 0;
+  overflow-x: hidden;
+  padding-top: 70px;
+}
+
+a {
+  text-decoration: none;
+  transition: variables.$transition-base;
+}
+
+/* MAIN CONTAINER */
+
+.main-container {
+  max-width: 900px;
+  margin: variables.$space-5 auto;
+  padding: variables.$space-4 variables.$space-3;
+  background: variables.$laser-blue-soft;
+  border-radius: 0;
+  box-shadow: variables.$shadow-soft;
+}
+
+/* TITRES */
+
+h2 {
+  @include components.section-title();
+}
+
+/* SÉPARATEURS */
+
+.section-separator {
+  margin: variables.$space-4 0 variables.$space-3;
+  @include components.guide-line();
+}
+
+.section-separator-laser {
+  margin: variables.$space-4 auto variables.$space-3;
+  @include components.laser-line(variables.$laser-blue, variables.$laser-blue-soft);
+}

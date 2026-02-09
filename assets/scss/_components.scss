@@ -1,0 +1,311 @@
+/* =======================
+   _components.scss
+   Composants + effets
+======================= */
+
+@use 'variables';
+
+/* =======================
+   MIXINS
+======================= */
+
+@mixin section-title() {
+  font-size: 1.8rem;
+  font-weight: 600;
+  margin-bottom: variables.$space-3;
+  letter-spacing: .4px;
+}
+
+@mixin guide-line() {
+  height: 2px;
+  background: linear-gradient(
+    90deg,
+    transparent,
+    variables.$accent-metal,
+    transparent
+  );
+  opacity: .35;
+}
+
+@mixin laser-line($from, $to) {
+  height: 2px;
+  background: linear-gradient(90deg, $from, $to);
+  opacity: .45;
+}
+
+@mixin brushed-metal() {
+  background: linear-gradient(
+    135deg,
+    #f5f5f5 0%,
+    #e8e8e8 40%,
+    #f2f2f2 100%
+  );
+}
+
+/* =======================
+   NAVBAR
+======================= */
+
+.navbar {
+  position: fixed;
+  top: 0;
+  width: 100%;
+  z-index: 1000;
+  background: variables.$color-dark;
+  padding: variables.$space-2 variables.$space-3;
+  box-shadow: variables.$shadow-medium;
+
+  .navbar-brand {
+    color: variables.$accent-metal;
+    font-weight: 600;
+    letter-spacing: .6px;
+    text-shadow: 0 0 6px rgba(variables.$fire-amber, 0.35);
+  }
+
+  .nav-link {
+    color: rgba(255,255,255,0.85);
+    letter-spacing: .3px;
+    font-weight: 400;
+
+    &:hover {
+      color: variables.$accent-metal-light;
+    }
+  }
+}
+
+/* =======================
+   HERO
+======================= */
+
+#heroCarousel {
+  height: 480px;
+  position: relative;
+  overflow: hidden;
+
+  .carousel-item {
+    height: 100%;
+    position: relative;
+
+    img {
+      width: 100%;
+      height: 100%;
+      object-fit: cover;
+      filter: brightness(0.85) contrast(1.05);
+    }
+
+    &::before {
+      content: "";
+      position: absolute;
+      inset: 0;
+      background: rgba(0, 0, 0, 0.35);
+      z-index: 1;
+    }
+  }
+
+  .carousel-caption {
+    position: absolute;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+    z-index: 2;
+    color: #fff;
+    text-align: center;
+    max-width: 700px;
+    padding: 0 variables.$space-2;
+    letter-spacing: .4px;
+  }
+
+  h2 { color: #fff; }
+  h2.accent { color: variables.$accent-metal; }
+}
+
+/* =======================
+   CARDS
+======================= */
+
+.card-grid {
+  display: grid;
+  grid-template-columns: repeat(auto-fit, minmax(280px, 1fr));
+  gap: variables.$space-4;
+}
+
+/* ============================
+   CARD TECH — PREMIUM METAL
+   ============================ */
+.card-tech {
+  background: linear-gradient(
+    135deg,
+    variables.$grey-light 0%,
+    darken(variables.$grey-light, 4%) 100%
+  );
+  border: none;
+  padding: variables.$space-4;
+  border-radius: 0;
+  box-shadow: 0 2px 6px rgba(0, 0, 0, 0.08);
+
+  h3, h5, h6 {
+    margin-bottom: variables.$space-2;
+    font-weight: 600;
+    font-size: variables.$font-size-lg;
+    color: variables.$color-dark;
+  }
+
+  p {
+    margin: 0;
+    font-size: variables.$font-size-base;
+    color: variables.$color-dark;
+  }
+}
+
+/* ============================
+   CARD CLEAN — INVERSE DE TECH
+   ============================ */
+.card-clean {
+  background: variables.$color-bg; // clair
+  border: none;
+  padding: variables.$space-4;
+  border-radius: 0;
+  box-shadow: 0 1px 6px rgba(0, 0, 0, 0.06);
+
+  h3, h5, h6 {
+    margin-bottom: variables.$space-2;
+    font-weight: 600;
+    font-size: variables.$font-size-lg;
+    color: variables.$color-dark;
+  }
+
+  p {
+    margin: 0;
+    font-size: variables.$font-size-base;
+    color: variables.$color-muted;
+  }
+}
+
+/* =======================
+   BOUTONS
+======================= */
+
+.btn-primary {
+  background: variables.$color-primary;
+  border-color: variables.$color-primary;
+  padding: .6rem 1.4rem;
+  font-weight: 500;
+  letter-spacing: .4px;
+
+  &:hover {
+    background: variables.$color-primary-dark;
+  }
+}
+
+.btn-accent {
+  background: linear-gradient(
+    90deg,
+    variables.$fire-orange,
+    variables.$fire-amber
+  );
+  border-color: variables.$fire-orange;
+  color: #0b0b0b;
+  padding: .6rem 1.4rem;
+  font-weight: 500;
+
+  &:hover {
+    background: linear-gradient(
+      90deg,
+      variables.$fire-amber,
+      variables.$fire-warm
+    );
+  }
+}
+
+/* =======================
+   FOOTER
+======================= */
+
+footer {
+  background: variables.$color-dark;
+  color: rgba(255,255,255,0.85);
+  padding: variables.$space-4 0;
+  font-size: variables.$font-size-sm;
+}
+
+.footer-grid {
+  display: grid;
+  grid-template-columns: repeat(auto-fit, minmax(220px, 1fr));
+  gap: variables.$space-3;
+  max-width: 1200px;
+  margin: 0 auto;
+  padding: 0 variables.$space-3;
+}
+
+.footer-card-orange {
+  grid-column: span 2;
+  background: linear-gradient(
+    135deg,
+    variables.$fire-red 0%,
+    variables.$fire-orange 40%,
+    variables.$fire-amber 75%,
+    variables.$fire-warm 100%
+  );
+  color: variables.$color-dark;
+  padding: variables.$space-3;
+  border-radius: 0;
+  box-shadow: 0 0 12px rgba(variables.$fire-amber, 0.4);
+
+  h4 { margin-bottom: .5rem; }
+  p { margin: 0; line-height: 1.35; }
+}
+
+.footer-block h4 {
+  color: rgba(255,255,255,0.9);
+  font-weight: 600;
+  margin-bottom: .5rem;
+  font-size: variables.$font-size-sm;
+}
+
+.footer-block p,
+.footer-block li {
+  color: rgba(255,255,255,0.8);
+  margin-bottom: .3rem;
+  line-height: 1.35;
+}
+
+.footer-block a {
+  color: rgba(255,255,255,0.9);
+  letter-spacing: .3px;
+  transition: color .2s ease;
+
+  &:hover {
+    color: variables.$accent-metal-light;
+  }
+}
+
+.footer-bottom {
+  text-align: center;
+  margin-top: variables.$space-3;
+  color: rgba(255,255,255,0.5);
+  font-size: variables.$font-size-xs;
+
+  a {
+    color: rgba(255,255,255,0.7);
+
+    &:hover {
+      color: variables.$accent-metal;
+    }
+  }
+}
+
+/* =======================
+   ÉLÉMENTS TECHNIQUES
+======================= */
+
+.hr-laser {
+  @include laser-line(variables.$laser-blue, variables.$laser-blue-soft);
+}
+
+.hr-laser-orange {
+  @include laser-line(variables.$fire-orange, variables.$fire-amber);
+}
+
+.hr-guide {
+  @include guide-line();
+}
