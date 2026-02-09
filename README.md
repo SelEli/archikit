@@ -10,13 +10,13 @@ Aucun backend : déploiement simple par FTP, uniquement du statique.
 
 ## 📑 Index
 
-- [Aperçus du site](#aperçu-du-site)
+- [Aperçu du site](#apercu-du-site)
 - [Objectif du projet](#objectif-du-projet)
-- [Fonctionnalités](#fonctionnalités)
+- [Fonctionnalités](#fonctionnalites)
 - [Structure du projet](#structure-du-projet)
-- [Développement](#développement)
+- [Développement](#developpement)
 - [Build](#build)
-- [Déploiement](#déploiement)
+- [Déploiement](#deploiement)
 - [Personnalisation](#personnalisation)
 - [Licence](#licence)
 
@@ -74,6 +74,8 @@ assets/
   js/           → scripts front (main.js, site-data.js)  
   scss/         → SCSS (variables, composants, main.scss)  
   css/          → CSS compilé (main.css)
+
+docs/           → Documentation/screenshots
 
 index.html      → page d’accueil  
 company.html    → page entreprise  
