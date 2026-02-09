@@ -10,15 +10,15 @@ Aucun backend : déploiement simple par FTP, uniquement du statique.
 
 ## 📑 Index
 
-- [Aperçu du site](#apercu-du-site)
-- [Objectif du projet](#objectif-du-projet)
-- [Fonctionnalités](#fonctionnalites)
-- [Structure du projet](#structure-du-projet)
-- [Développement](#developpement)
-- [Build](#build)
-- [Déploiement](#deploiement)
-- [Personnalisation](#personnalisation)
-- [Licence](#licence)
+- [Aperçu du site](#-apercu-du-site)
+- [Objectif du projet](#-objectif-du-projet)
+- [Fonctionnalités](#-fonctionnalites)
+- [Structure du projet](#-structure-du-projet)
+- [Développement](#-developpement)
+- [Build](#-build)
+- [Déploiement](#-deploiement)
+- [Personnalisation](#-personnalisation)
+- [Licence](#-licence)
 
 ---
 
