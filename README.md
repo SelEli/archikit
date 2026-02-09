@@ -10,6 +10,7 @@ Aucun backend : déploiement simple par FTP, uniquement du statique.
 
 ## 📑 Index
 
+- [Aperçus du site](#aperçu-du-site)
 - [Objectif du projet](#objectif-du-projet)
 - [Fonctionnalités](#fonctionnalités)
 - [Structure du projet](#structure-du-projet)
@@ -18,6 +19,20 @@ Aucun backend : déploiement simple par FTP, uniquement du statique.
 - [Déploiement](#déploiement)
 - [Personnalisation](#personnalisation)
 - [Licence](#licence)
+
+---
+
+## 📸 Aperçu du site
+
+Quelques captures d’écran pour visualiser rapidement le rendu :
+
+Page d’accueil
+
+Page projets
+
+Version mobile
+
+(Les images sont disponibles dans le dossier /docs/ )
 
 ---
 
